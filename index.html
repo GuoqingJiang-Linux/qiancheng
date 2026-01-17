@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前程留学 - 中学生出国留学资讯平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .country-card {
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .country-card:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .country-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .country-card p {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .hero {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎓 前程留学</h1>
+        <p>中学生出国留学资讯平台 - 为您的孩子规划国际化未来</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#apply">申请流程</a></li>
+            <li><a href="#schools">院校选择</a></li>
+            <li><a href="#courses">课程介绍</a></li>
+            <li><a href="#tips">注意事项</a></li>
+            <li><a href="#cost">费用分析</a></li>
+        </ul>
+    </nav>
+
+    <main id="home">
+        <section class="hero">
+            <h2>为什么选择前程留学？</h2>
+            <p>为北上广深富裕家庭提供专业的中学生出国留学资讯服务，帮助您的孩子避开高考压力，拥有国际化视野</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>📚 系统资讯</h3>
+                <p>提供完整的出国留学信息，包括申请流程、院校选择、课程介绍等</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 精准匹配</h3>
+                <p>根据家庭需求和条件，推荐最适合的留学国家和院校</p>
+            </div>
+            <div class="feature-card">
+                <h3>💰 费用透明</h3>
+                <p>详细分析各国留学成本，帮助家庭做好经济规划</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚠️ 避坑指南</h3>
+                <p>分享申请过程中的常见问题和注意事项，避免走弯路</p>
+            </div>
+        </section>
+
+        <section class="section" id="apply">
+            <h2>🌍 申请流程</h2>
+            <div class="country-grid">
+                <div class="country-card">
+                    <h3>🇬🇧 英国</h3>
+                    <p>UCAS申请系统<br>A-Level成绩要求<br>雅思6.5+<br>提前1年准备</p>
+                </div>
+                <div class="country-card">
+                    <h3>🇺🇸 美国</h3>
+                    <p>Common App申请<br>SAT/ACT考试<br>托福/雅思<br>文书推荐信</p>
+                </div>
+                <div class="country-card">
+                    <h3>🇦🇺 澳大利亚</h3>
+                    <p>直接申请院校<br>高考成绩认可<br>雅思6.0+<br>2月/7月入学</p>
+                </div>
+                <div class="country-card">
+                    <h3>🇳🇿 新西兰</h3>
+                    <p>学制灵活<br>费用相对较低<br>雅思5.5+<br>2月/7月入学</p>
+                </div>
+                <div class="country-card">
+                    <h3>🇨🇦 加拿大</h3>
+                    <p>OUAC申请系统<br>高考/会考成绩<br>雅思6.0+<br>9月/1月入学</p>
+                </div>
+                <div class="country-card">
+                    <h3>🇭🇰 香港</h3>
+                    <p>距离近<br>中文环境<br>高考成绩<br>雅思6.0+</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="schools">
+            <h2>🏫 院校选择</h2>
+            <p>我们提供以下国家的院校数据库：</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem;">
+                <li><strong>英国</strong>：牛津、剑桥、帝国理工、伦敦政经、UCL等G5院校</li>
+                <li><strong>美国</strong>：常春藤联盟、州立大学系统、文理学院</li>
+                <li><strong>加拿大</strong>：多伦多大学、UBC、麦吉尔大学、滑铁卢大学等</li>
+                <li><strong>澳大利亚</strong>：澳洲八大、四星大学</li>
+                <li><strong>新西兰</strong>：奥克兰大学、梅西大学等</li>
+                <li><strong>香港</strong>：港大、港中文、港科技等八大院校</li>
+            </ul>
+            <p style="margin-top: 1rem; color: #667eea; font-weight: 600;">即将推出：智能院校匹配系统，根据您的需求推荐最佳选择！</p>
+        </section>
+
+        <section class="section" id="courses">
+            <h2>📖 国际高中课程介绍</h2>
+
+            <div class="country-grid">
+                <div class="country-card">
+                    <h3>IB课程</h3>
+                    <p><strong>国际文凭课程</strong><br>6个学科组 + TOK/EE/CAS<br>全球认可度最高<br>适合全面发展<br>申请顶尖名校首选</p>
+                </div>
+                <div class="country-card">
+                    <h3>AP课程</h3>
+                    <p><strong>美国大学先修课</strong><br>30+科目可选<br>可换取大学学分<br>美国高校青睐<br>搭配GPA使用</p>
+                </div>
+                <div class="country-card">
+                    <h3>A-Level</h3>
+                    <p><strong>英国高中课程</strong><br>3-4门科目深度学习<br>英国留学首选<br>澳洲香港也认可<br>学术要求高</p>
+                </div>
+                <div class="country-card">
+                    <h3>DSE课程</h3>
+                    <p><strong>香港中学文凭</strong><br>香港官方考试<br>中英双语授课<br>港校申请必备<br>海外院校也认可</p>
+                </div>
+                <div class="country-card">
+                    <h3>IGCSE</h3>
+                    <p><strong>国际中等教育</strong><br>14-16岁学习<br>A-Level前置课程<br>英国体系基础<br>5-8门科目</p>
+                </div>
+                <div class="country-card">
+                    <h3>VCE</h3>
+                    <p><strong>澳大利亚课程</strong><br>维多利亚州课程<br>澳洲留学首选<br>灵活选课<br>平时成绩占比高</p>
+                </div>
+                <div class="country-card">
+                    <h3>OSSD</h3>
+                    <p><strong>加拿大课程</strong><br>安大略省高中课程<br>非应试教育<br>过程性评估<br>北美认可度高</p>
+                </div>
+            </div>
+
+            <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea; margin-top: 2rem;">
+                <h4 style="color: #667eea; margin-bottom: 1rem;">🎯 课程选择建议</h4>
+                <ul style="margin-left: 1.5rem; color: #333;">
+                    <li><strong>目标英国/澳洲</strong>：A-Level 或 VCE</li>
+                    <li><strong>目标美国</strong>：AP + 美高GPA 或 IB</li>
+                    <li><strong>目标香港</strong>：DSE（香港中学文凭考试）</li>
+                    <li><strong>目标全球名校</strong>：IB（学术挑战最大，认可度最高）</li>
+                    <li><strong>目标加拿大</strong>：OSSD</li>
+                    <li><strong>综合发展</strong>：IB + AP组合</li>
+                </ul>
+            </div>
+
+            <div style="background: #fff9e6; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ffc107; margin-top: 1rem;">
+                <h4 style="color: #ffc107; margin-bottom: 1rem;">📊 课程对比</h4>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #ffc107; color: #333;">
+                            <th style="padding: 0.8rem; text-align: left;">课程</th>
+                            <th style="padding: 0.8rem; text-align: left;">学制</th>
+                            <th style="padding: 0.8rem; text-align: left;">科目数</th>
+                            <th style="padding: 0.8rem; text-align: left;">评估方式</th>
+                            <th style="padding: 0.8rem; text-align: left;">难度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.8rem;">IB</td>
+                            <td style="padding: 0.8rem;">2年</td>
+                            <td style="padding: 0.8rem;">6门</td>
+                            <td style="padding: 0.8rem;">考试+论文+活动</td>
+                            <td style="padding: 0.8rem;">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.8rem;">A-Level</td>
+                            <td style="padding: 0.8rem;">2年</td>
+                            <td style="padding: 0.8rem;">3-4门</td>
+                            <td style="padding: 0.8rem;">考试为主</td>
+                            <td style="padding: 0.8rem;">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.8rem;">DSE</td>
+                            <td style="padding: 0.8rem;">3年</td>
+                            <td style="padding: 0.8rem;">4-6门</td>
+                            <td style="padding: 0.8rem;">考试+校本评核</td>
+                            <td style="padding: 0.8rem;">⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.8rem;">AP</td>
+                            <td style="padding: 0.8rem;">1-3年</td>
+                            <td style="padding: 0.8rem;">灵活</td>
+                            <td style="padding: 0.8rem;">标准化考试</td>
+                            <td style="padding: 0.8rem;">⭐⭐⭐</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.8rem;">VCE</td>
+                            <td style="padding: 0.8rem;">2年</td>
+                            <td style="padding: 0.8rem;">5-6门</td>
+                            <td style="padding: 0.8rem;">平时+考试</td>
+                            <td style="padding: 0.8rem;">⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">OSSD</td>
+                            <td style="padding: 0.8rem;">2-3年</td>
+                            <td style="padding: 0.8rem;">6门12年级</td>
+                            <td style="padding: 0.8rem;">过程性评估</td>
+                            <td style="padding: 0.8rem;">⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="tips">
+            <h2>⚠️ 注意事项</h2>
+            <div style="display: grid; gap: 1rem;">
+                <div style="padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+                    <strong>📅 时间规划</strong>：提前1-2年开始准备，不要临时抱佛脚
+                </div>
+                <div style="padding: 1rem; background: #d1ecf1; border-left: 4px solid #17a2b8; border-radius: 4px;">
+                    <strong>📝 语言考试</strong>：雅思/托福成绩有效期2年，合理安排考试时间
+                </div>
+                <div style="padding: 1rem; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>💼 文书准备</strong>：个人陈述和推荐信要真实、有特色
+                </div>
+                <div style="padding: 1rem; background: #f8d7da; border-left: 4px solid #dc3545; border-radius: 4px;">
+                    <strong>🏠 住宿安排</strong>：提前了解宿舍、寄宿家庭、租房等选项
+                </div>
+                <div style="padding: 1rem; background: #e2e3e5; border-left: 4px solid #6c757d; border-radius: 4px;">
+                    <strong>🛂 签证申请</strong>：确保材料真实完整，提前准备资金证明
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="cost">
+            <h2>💰 费用分析</h2>
+
+            <h3 style="color: #667eea; margin: 2rem 0 1rem 0;">🏫 高中国际部/国际学校费用（3年）</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                <thead>
+                    <tr style="background: #667eea; color: white;">
+                        <th style="padding: 1rem; text-align: left;">类型</th>
+                        <th style="padding: 1rem; text-align: left;">学费/年</th>
+                        <th style="padding: 1rem; text-align: left;">其他费用/年</th>
+                        <th style="padding: 1rem; text-align: left;">3年总计</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🎯 公立高中国际部</td>
+                        <td style="padding: 1rem;">8-15万</td>
+                        <td style="padding: 1rem;">3-5万</td>
+                        <td style="padding: 1rem; font-weight: bold;">33-60万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🌟 民办国际学校</td>
+                        <td style="padding: 1rem;">15-25万</td>
+                        <td style="padding: 1rem;">5-8万</td>
+                        <td style="padding: 1rem; font-weight: bold;">60-99万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">💎 顶尖国际学校</td>
+                        <td style="padding: 1rem;">25-35万</td>
+                        <td style="padding: 1rem;">8-12万</td>
+                        <td style="padding: 1rem; font-weight: bold;">99-141万</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="color: #666; font-size: 0.9rem;">*其他费用包括：教材费、活动费、住宿费、校服费等</p>
+
+            <h3 style="color: #667eea; margin: 2rem 0 1rem 0;">🎓 海外本科四年费用</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                <thead>
+                    <tr style="background: #667eea; color: white;">
+                        <th style="padding: 1rem; text-align: left;">国家</th>
+                        <th style="padding: 1rem; text-align: left;">学费/年</th>
+                        <th style="padding: 1rem; text-align: left;">生活费/年</th>
+                        <th style="padding: 1rem; text-align: left;">4年总计</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🇬🇧 英国</td>
+                        <td style="padding: 1rem;">15-25万</td>
+                        <td style="padding: 1rem;">10-15万</td>
+                        <td style="padding: 1rem; font-weight: bold;">100-160万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🇺🇸 美国</td>
+                        <td style="padding: 1rem;">20-35万</td>
+                        <td style="padding: 1rem;">10-20万</td>
+                        <td style="padding: 1rem; font-weight: bold;">120-220万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🇦🇺 澳大利亚</td>
+                        <td style="padding: 1rem;">15-25万</td>
+                        <td style="padding: 1rem;">8-12万</td>
+                        <td style="padding: 1rem; font-weight: bold;">92-148万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🇳🇿 新西兰</td>
+                        <td style="padding: 1rem;">12-20万</td>
+                        <td style="padding: 1rem;">6-10万</td>
+                        <td style="padding: 1rem; font-weight: bold;">72-120万</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🇨🇦 加拿大</td>
+                        <td style="padding: 1rem;">12-25万</td>
+                        <td style="padding: 1rem;">8-15万</td>
+                        <td style="padding: 1rem; font-weight: bold;">80-160万</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;">🇭🇰 香港</td>
+                        <td style="padding: 1rem;">12-18万</td>
+                        <td style="padding: 1rem;">8-12万</td>
+                        <td style="padding: 1rem; font-weight: bold;">80-120万</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea; margin-top: 1.5rem;">
+                <h4 style="color: #667eea; margin-bottom: 1rem;">💡 总投资参考（高中3年 + 本科4年）</h4>
+                <ul style="margin-left: 1.5rem; color: #333;">
+                    <li><strong>公立国际部 + 美国本科</strong>：约153-280万</li>
+                    <li><strong>民办国际学校 + 英国本科</strong>：约160-259万</li>
+                    <li><strong>顶尖国际学校 + 美国本科</strong>：约219-361万</li>
+                    <li><strong>民办国际学校 + 加拿大本科</strong>：约140-259万</li>
+                    <li><strong>民办国际学校 + 香港本科</strong>：约140-219万</li>
+                </ul>
+            </div>
+
+            <h3 style="color: #667eea; margin: 2rem 0 1rem 0;">📝 申请辅助费用（可选）</h3>
+            <div style="background: #fff9e6; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 1rem;">
+                <p style="color: #333; margin-bottom: 1rem;"><strong>⚠️ 注意</strong>：以下费用为可选项目，如果家庭有能力自行完成申请准备，可节省这部分开支。</p>
+            </div>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                <thead>
+                    <tr style="background: #ffc107; color: #333;">
+                        <th style="padding: 1rem; text-align: left;">项目</th>
+                        <th style="padding: 1rem; text-align: left;">费用范围</th>
+                        <th style="padding: 1rem; text-align: left;">说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">📄 文书修改服务</td>
+                        <td style="padding: 1rem;">1-5万</td>
+                        <td style="padding: 1rem;">个人陈述、推荐信等文书润色</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🎯 留学中介服务</td>
+                        <td style="padding: 1rem;">5-15万</td>
+                        <td style="padding: 1rem;">全程申请指导、院校选择、材料准备</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">📚 语言培训</td>
+                        <td style="padding: 1rem;">2-8万</td>
+                        <td style="padding: 1rem;">雅思/托福/SAT/ACT等考试培训课程</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">🎨 背景提升项目</td>
+                        <td style="padding: 1rem;">3-10万</td>
+                        <td style="padding: 1rem;">科研项目、竞赛、志愿者活动等</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 1rem;">✈️ 签证服务</td>
+                        <td style="padding: 1rem;">0.5-2万</td>
+                        <td style="padding: 1rem;">签证申请指导、材料审核</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;">🏠 住宿安排服务</td>
+                        <td style="padding: 1rem;">1-3万</td>
+                        <td style="padding: 1rem;">海外宿舍、寄宿家庭、租房中介服务</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="background: #d4edda; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #28a745; margin-top: 1rem;">
+                <h4 style="color: #28a745; margin-bottom: 1rem;">💡 节省建议</h4>
+                <ul style="margin-left: 1.5rem; color: #333;">
+                    <li><strong>自行完成申请</strong>：通过官网和权威渠道获取信息，DIY申请可节省中介费用</li>
+                    <li><strong>利用学校资源</strong>：国际学校通常提供免费的申请指导和文书辅导</li>
+                    <li><strong>家长协助</strong>：有留学背景的家长可以提供专业指导</li>
+                    <li><strong>线上资源</strong>：利用免费/低价的在线课程和申请指南</li>
+                </ul>
+            </div>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">*以上费用为人民币估算，具体以服务机构报价为准</p>
+            <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">*以上费用为人民币估算，具体以院校官方信息为准，实际费用可能因汇率、专业、城市等因素有所差异</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 前程留学 - 中学生出国留学资讯平台</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">微信公众号：前程留学 | 帮助您的孩子拥有国际化未来</p>
+    </footer>
+</body>
+</html>
