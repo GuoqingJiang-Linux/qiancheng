@@ -44,8 +44,10 @@
             justify-content: center;
             list-style: none;
             padding: 0.8rem 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            flex-wrap: nowrap;
+            gap: 0.3rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         nav li {
@@ -56,10 +58,11 @@
             color: #667eea;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 6px;
             transition: all 0.3s;
+            white-space: nowrap;
         }
 
         nav a:hover {
@@ -367,15 +370,16 @@
             }
 
             nav ul {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 padding: 0.5rem;
+                overflow-x: auto;
+                justify-content: flex-start;
             }
 
             nav li {
-                width: 100%;
-                text-align: center;
-                margin: 0.2rem 0;
+                width: auto;
+                margin: 0;
             }
 
             nav a {
@@ -452,6 +456,7 @@
             <li><a href="#tips">注意事项</a></li>
             <li><a href="#cost">费用分析</a></li>
             <li><a href="#agencies">机构推荐</a></li>
+            <li><a href="#faq">常见问题</a></li>
         </ul>
     </nav>
 
@@ -1171,6 +1176,189 @@
                     <li><strong>社区论坛</strong>：知乎留学话题、豆瓣留学小组、Reddit留学版块</li>
                     <li><strong>免费工具</strong>：Naviance、College Navigator、UniRank</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <h2>❓ 常见问题 FAQ</h2>
+            <p style="margin-bottom: 2rem;">关于国际部和国际路线的常见疑问解答，帮助您更好地做出选择。</p>
+
+            <div style="display: grid; gap: 1.5rem;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">Q1: 全部课程都是英文教学吗？</h3>
+                    <p style="color: #333; line-height: 1.8;"><strong>答：</strong>国际部/国际学校的核心课程（如IB、AP、A-Level等）基本上都是英文授课，但具体比例因学校而异：</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem; color: #333;">
+                        <li><strong>纯国际学校</strong>：几乎100%英文教学，中文课为选修</li>
+                        <li><strong>公立国际部</strong>：约70-90%英文教学，语文课和政治课通常为中文</li>
+                        <li><strong>部分课程</strong>：理科课程（如数学、物理、化学）通常采用英文教材和英文授课，但解释和讨论时中英文混用比较常见</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">💡 <strong>建议</strong>：入学前最好具备雅思5.5-6.0或托福70-80的语言基础，否则全英文授课可能会导致听课困难。</p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #764ba2;">
+                    <h3 style="color: #764ba2; margin-bottom: 1rem;">Q2: 学生毕业后的去向大概是怎样一个分布及相应比例？</h3>
+                    <p style="color: #333; line-height: 1.8;"><strong>答：</strong>国际部毕业生的去向分布因学校和学生水平而异，以下是较为典型的分布情况：</p>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <thead>
+                            <tr style="background: #764ba2; color: white;">
+                                <th style="padding: 0.8rem; text-align: left;">去向地区</th>
+                                <th style="padding: 0.8rem; text-align: left;">典型比例</th>
+                                <th style="padding: 0.8rem; text-align: left;">代表院校</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🇺🇸 美国</td>
+                                <td style="padding: 0.8rem;">35-45%</td>
+                                <td style="padding: 0.8rem;">常春藤、TOP 30、州立大学</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🇬🇧 英国</td>
+                                <td style="padding: 0.8rem;">20-30%</td>
+                                <td style="padding: 0.8rem;">G5、罗素集团、红砖大学</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🇭🇰 香港</td>
+                                <td style="padding: 0.8rem;">10-15%</td>
+                                <td style="padding: 0.8rem;">港大、港中文、港科技</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🇦🇺 澳大利亚</td>
+                                <td style="padding: 0.8rem;">8-12%</td>
+                                <td style="padding: 0.8rem;">澳洲八大</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🇨🇦 加拿大</td>
+                                <td style="padding: 0.8rem;">5-10%</td>
+                                <td style="padding: 0.8rem;">多伦多、UBC、麦吉尔</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.8rem;">🇸🇬 新加坡/其他</td>
+                                <td style="padding: 0.8rem;">3-8%</td>
+                                <td style="padding: 0.8rem;">NUS、NTU、欧洲院校</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">⚠️ <strong>注意</strong>：以上为大致分布，具体比例因学校声誉和学生水平差异较大。顶尖国际部的美本TOP 30录取率可达30-50%。</p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #28a745;">
+                    <h3 style="color: #28a745; margin-bottom: 1rem;">Q3: 教学是像高考一样偏学术？对综合能力的提升明显高于非国际部的班级吗？</h3>
+                    <p style="color: #333; line-height: 1.8;"><strong>答：</strong>国际部的教学模式和目标与高考体系有显著差异：</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 6px;">
+                            <h4 style="color: #667eea; margin-bottom: 0.5rem;">📚 教学模式对比</h4>
+                            <ul style="font-size: 0.95rem; color: #333; margin-left: 1rem;">
+                                <li><strong>国际部</strong>：探究式学习、项目制教学、批判性思维培养</li>
+                                <li><strong>普通班</strong>：知识点讲解、刷题备考、标准化考试</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1rem; border-radius: 6px;">
+                            <h4 style="color: #667eea; margin-bottom: 0.5rem;">🌟 综合能力提升</h4>
+                            <ul style="font-size: 0.95rem; color: #333; margin-left: 1rem;">
+                                <li><strong>国际部优势</strong>：领导力、团队协作、公共演讲、独立研究能力</li>
+                                <li><strong>普通班侧重</strong>：知识记忆、考试技巧、时间管理</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="background: #d4edda; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                        <p style="color: #155724; margin: 0;"><strong>结论：</strong>国际部在综合能力培养方面确实优于普通高考班，尤其是批判性思维、沟通表达、自我管理和独立思考能力。但学术深度上，两种体系各有侧重——高考在知识点的深度和难度上通常更高。</p>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #ffc107; margin-bottom: 1rem;">Q4: 相比较而言，国际部比其它普通高考班型，学业压力更大还是更小？</h3>
+                    <p style="color: #333; line-height: 1.8;"><strong>答：</strong>国际部和普通高考班的压力来源不同，很难简单地说哪个压力更大：</p>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <thead>
+                            <tr style="background: #ffc107; color: #333;">
+                                <th style="padding: 0.8rem; text-align: left;">对比维度</th>
+                                <th style="padding: 0.8rem; text-align: left;">国际部</th>
+                                <th style="padding: 0.8rem; text-align: left;">普通高考班</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">📅 考试压力</td>
+                                <td style="padding: 0.8rem;">持续性评估，贯穿整个高中</td>
+                                <td style="padding: 0.8rem;">一考定终身，压力集中在高三</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">📝 作业形式</td>
+                                <td style="padding: 0.8rem;">论文、项目、报告、演讲</td>
+                                <td style="padding: 0.8rem;">大量刷题、重复练习</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">🌍 申请压力</td>
+                                <td style="padding: 0.8rem;">多国联申，不确定性高</td>
+                                <td style="padding: 0.8rem;">按分数填报志愿，相对确定</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.8rem;">💰 经济压力</td>
+                                <td style="padding: 0.8rem;">高额学费和生活费</td>
+                                <td style="padding: 0.8rem;">费用相对较低</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.8rem;">😴 时间安排</td>
+                                <td style="padding: 0.8rem;">课外活动、社团、竞赛占用大量时间</td>
+                                <td style="padding: 0.8rem;">大部分时间用于学习</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                        <p style="color: #856404; margin: 0;"><strong>总结：</strong>国际部的压力是"分散的、多维度的"，普通高考班的压力是"集中的、单维度的"。对于抗压能力强、善于时间管理的学生，国际部的多元化压力可能更容易应对；对于心理承受能力较弱或需要明确目标驱动的学生，可能普通高考班更适合。</p>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #dc3545;">
+                    <h3 style="color: #dc3545; margin-bottom: 1rem;">Q5: 如何判断一个孩子是否适合走国际路线？国际路线更适合什么样的孩子？</h3>
+                    <p style="color: #333; line-height: 1.8;"><strong>答：</strong>国际路线并非适合所有学生，以下是适合走国际路线学生的典型特征：</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 6px; border-top: 3px solid #667eea;">
+                            <h4 style="color: #667eea; margin-bottom: 0.5rem;">✅ 适合的学生特征</h4>
+                            <ul style="font-size: 0.9rem; color: #333; margin-left: 1rem;">
+                                <li>英语基础好，有较强的语言天赋</li>
+                                <li>善于表达，不畏惧公众演讲和写作</li>
+                                <li>有独立思考和批判性思维能力</li>
+                                <li>兴趣广泛，愿意尝试不同领域</li>
+                                <li>自我管理能力强，能规划时间</li>
+                                <li>家庭经济条件支持留学费用</li>
+                                <li>有明确的出国意愿，而非被动选择</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1rem; border-radius: 6px; border-top: 3px solid #dc3545;">
+                            <h4 style="color: #dc3545; margin-bottom: 0.5rem;">❌ 可能不适合的学生特征</h4>
+                            <ul style="font-size: 0.9rem; color: #333; margin-left: 1rem;">
+                                <li>英语基础薄弱，短期内难以提高</li>
+                                <li>极度内向，不善于沟通表达</li>
+                                <li>缺乏自主性，依赖家长督促</li>
+                                <li>只追求高分，对课外活动没兴趣</li>
+                                <li>家庭经济压力大，留学成为负担</li>
+                                <li>出国意愿不强，是家长强行安排</li>
+                                <li>抗压能力弱，难以适应多元化评价</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 6px; margin-top: 1rem;">
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">🔍 家长可以通过以下方式判断：</h4>
+                        <ol style="margin-left: 1.5rem; color: #333;">
+                            <li><strong>试读体验</strong>：参加国际学校的开放日、短期课程，感受教学模式</li>
+                            <li><strong>语言测试</strong>：做一次雅思/托福模拟测试，了解孩子当前水平</li>
+                            <li><strong>兴趣观察</strong>：看孩子是否主动参与社团、竞赛、志愿者活动</li>
+                            <li><strong>沟通讨论</strong>：与孩子深入讨论出国意愿和未来规划</li>
+                            <li><strong>时间管理</strong>：观察孩子在初中阶段的时间安排和自律能力</li>
+                            <li><strong>心理评估</strong>：评估孩子是否具备独立生活和处理压力的能力</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">💬 还有更多疑问？</h3>
+                <p style="margin-bottom: 1rem; opacity: 0.9;">国际路线选择关乎孩子一生，建议家长多方面了解、慎重决策。</p>
+                <p style="opacity: 0.9;">关注「千橙平台」微信公众号，获取更多留学资讯和专业建议。</p>
             </div>
         </section>
     </main>
